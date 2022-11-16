@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.bg {
+    background: url(https://i.ibb.co/87GbbFP/2799006.jpg) no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    filter: drop-shadow(0.5px)
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #d9e0d8;
+}
+
+.box {
+    position: relative;
+    width: 380px;
+    height: 420px;
+    background: #151515;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 11%;
+}
+
+.box::before{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent, #5351c3, #5351c3);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+}
+
+.box::after{
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 380px;
+    height: 420px;
+    background: linear-gradient(0deg,transparent, #2a3768, #2a3768);
+    transform-origin: bottom right;
+    animation: animate 6s linear infinite;
+    animation-delay: -3s;
+}
+
+@keyframes animate 
+{
+    0%
+    {
+        transform: rotate(0deg);
+    }   
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+.form{
+    position: absolute;
+    inset: 2px;
+    border-radius: 8px;
+    background: white;
+    z-index: 10;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form h2{
+    color: #151515;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+a[type="start"]
+{
+    border: none;
+    outline: none;
+    background: #cecbcb;
+    padding: 11px 30px;
+    width: 100px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    margin: auto;
+}
+
+a[type="start"]:hover
+{
+    border: none;
+    outline: none;
+    background: #2c46bb;
+    padding: 11px 30px;
+    width: 100px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: #151515;
+}
